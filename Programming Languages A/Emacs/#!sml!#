@@ -1,0 +1,47 @@
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "practice.sml";
+[opening practice.sml]
+practice.sml:34.13 Error: syntax error: inserting  EQUALOP
+practice.sml:36.6-36.10 Error: syntax error: replacing  ELSE with  THEN
+practice.sml:38.6-38.10 Error: syntax error: replacing  ELSE with  EQUALOP
+practice.sml:40.5 Error: syntax error: inserting  LET
+practice.sml:44.1 Error: syntax error found at EOF
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:15.24-15.46
+             ../compiler/TopLevel/interact/evalloop.sml:42.54
+             ../compiler/TopLevel/interact/evalloop.sml:299.20-299.23
+- use "practice.sml";
+[opening practice.sml]
+practice.sml:34.13 Error: syntax error: inserting  EQUALOP
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:15.24-15.46
+             ../compiler/TopLevel/interact/evalloop.sml:42.54
+             ../compiler/TopLevel/interact/evalloop.sml:299.20-299.23
+- use "practice.sml";
+[opening practice.sml]
+practice.sml:34.13 Error: syntax error: inserting  EQUALOP
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:15.24-15.46
+             ../compiler/TopLevel/interact/evalloop.sml:42.54
+             ../compiler/TopLevel/interact/evalloop.sml:299.20-299.23
+- use 
+= "practice.sml";
+[opening practice.sml]
+practice.sml:34.13 Error: syntax error: inserting  EQUALOP
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:15.24-15.46
+             ../compiler/TopLevel/interact/evalloop.sml:42.54
+             ../compiler/TopLevel/interact/evalloop.sml:299.20-299.23
+- use "practice.sml";
+[opening practice.sml]
+practice.sml:34.13 Error: syntax error: inserting  EQUALOP
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:15.24-15.46
+             ../compiler/TopLevel/interact/evalloop.sml:42.54
+             ../compiler/TopLevel/interact/evalloop.sml:299.20-299.23
+- 
