@@ -1,20 +1,4 @@
-(*Below does not work lol
 fun alternate (alt: int list) =
-    let
-	val pos = true
-    in
-	if null alt
-	then 0
-	else if pos
-	    then pos = false (*not possible on this language*)
-	    (hd alt)+(alternate(tl alt))
-        else
-	    pos = true (*not possible on this language*)
-	    (~(hd alt))+(alternate(tl alt))
-    end
- *)
-
-fun alternate2 (alt: int list) =
     let
 	fun helper(x: int list, y: bool) =
 	    if null x
@@ -74,3 +58,63 @@ fun repeat(x: int list * int list) =
     in
 	loopA(#1(x), #2(x))
     end
+
+	
+fun addOpt(x: int option * int option) =
+    if (isSome (#1 x) andalso isSome (#2 x)) then
+	SOME (valOf (#1 x) + valOf (#2 x))
+    else
+	NONE
+(*below is to test if SOME 1 + SOME 1 = SOME 2
+fun testSome()=
+    SOME 1 + SOME 2 -> gives us an error
+
+fun testNone()= (*intended to see if there's any way to convert NONE*)
+    valOf(NONE)
+*)
+
+(*Could not think of a way to do this without two helper functions*)
+fun addAllOpt(a: int option list) =
+    let
+	fun helper(b:int option list)=(*adds everything once we know we can*)
+	    if null b then
+		0
+	    else if (isSome (hd b)) then
+		valOf(hd b) + helper(tl b)
+	    else
+		helper(tl b)
+	fun helper2(c:int option list)=(*checks if the list is empty or all none*)
+	    if null c then
+		true
+	    else if isSome(hd c) then
+		false
+	    else
+		helper2(tl c)
+    in
+	if helper2(a) = true then
+	    NONE
+        else
+	    SOME (helper(a))
+    end
+	
+fun any(x: bool list)=
+    if null x then
+	false
+    else if hd x then
+	true
+    else
+	any(tl x)
+
+fun all(x: bool list) =
+    if null x then
+	true
+    else if hd x = false then
+	false
+    else
+	all(tl x)
+
+fun zip(x: int list * int list) =
+    if (null (#1 x)) orelse (null (#2 x)) then
+	[]
+    else 
+	(hd (#1 x), hd (#2 x)):: zip(tl (#1 x), tl (#2 x))
