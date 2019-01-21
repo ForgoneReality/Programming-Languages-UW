@@ -77,4 +77,3 @@ fun oldest(x: (int*int*int) list) =
 	else
 	    SOME (helper(x))
     end
-	
